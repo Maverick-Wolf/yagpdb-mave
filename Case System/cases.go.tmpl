@@ -10,12 +10,12 @@
 {{$user := ($args.Get 0).User}}
 {{$id := ($args.Get 0).User.ID}}
 {{$display := ""}}
-{{ $page := 1 }} {{/* Default page to start at */}}
-{{ if ($args.IsSet 1)}}
-{{ $page = ($args.Get 1)}}
+{{$page := 1}} {{/* Default page to start at */}}
+{{if ($args.IsSet 1)}}
+{{$page = ($args.Get 1)}}
 {{end}}
-{{$skip := mult (sub $page 1) 10 }}
-{{ $cases := dbTopEntries $id 10 $skip}} {{/* Retrieve the relevant DB entries with the parameters provided */}}
+{{$skip := mult (sub $page 1) 10}}
+{{$cases := dbTopEntries $id 10 $skip}} 
 {{- range $cases -}}
 		{{ $value := str .Value }} 
 		{{ $display = joinStr "" $display "\n" $value}} 
