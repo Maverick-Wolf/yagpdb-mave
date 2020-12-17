@@ -7,19 +7,19 @@
     Recommended trigger: Regex trigger with trigger `\A(-|<@!?204255221017214977>\s*)(viewcase|seecase|vc|sc|case)(\s+|\z)`
 */}}
 {{$args := parseArgs 1 "`-viewcase case_number`" (carg "int" "case number")}}
-{{ $a := "" }}{{ $name := ""}}{{ $iconurl := "" }}{{ $warnname := "" }}{{ $reason := "" }}{{$userid := ""}}{{$action := ""}}{{$link := ""}}{{$msgid := ""}}{{$channel := ""}}{{$server := .Guild.ID}}
+{{$a := ""}}{{$name := ""}}{{$iconurl := "" }}{{$warnname := "" }}{{$reason := "" }}{{$userid := ""}}{{$action := ""}}{{$link := ""}}{{$msgid := ""}}{{$channel := ""}}{{$server := .Guild.ID}}
 {{$b := ($args.Get 0)}}
 {{if (dbGet $b "viewcase")}}
-{{ with (dbGet $b "viewcase") }}	
-{{ $a = sdict .Value }}
-	{{ $name = $a.Get "name" }}
-	{{ $iconurl = $a.Get "avatar" }}
-	{{ $warnname = $a.Get "warnname" }}
-	{{ $reason = $a.Get "reason" }}
-	{{ $action = $a.Get "action" }}
-    	{{ $userid = $a.Get "userid"}}
-	{{ $msgid = $a.Get "msgid"}}
-	{{ $channel = $a.Get "channel"}}
+{{with (dbGet $b "viewcase")}}	
+{{$a = sdict .Value}}
+	{{$name = $a.Get "name"}}
+	{{$iconurl = $a.Get "avatar"}}
+	{{$warnname = $a.Get "warnname"}}
+	{{$reason = $a.Get "reason"}}
+	{{$action = $a.Get "action"}}
+    	{{$userid = $a.Get "userid"}}
+	{{$msgid = $a.Get "msgid"}}
+	{{$channel = $a.Get "channel"}}
 {{end}}
 {{$embed := cembed "author" (sdict "name" $name "url" "" "icon_url" $iconurl) "description" (print "[**Jump to Warn**](https://discordapp.com/channels/" $server "/" $channel "/" $msgid "/)\n**User** : `" $warnname "`\t`(" $userid ")`\n **Action** : `" $action "`\n **Reason** : `" $reason "`") "color" 0x00ff00 "footer" (sdict "text" (print "Case#" $b))}}
 {{sendMessage nil $embed}} 
