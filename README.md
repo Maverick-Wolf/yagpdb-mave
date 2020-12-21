@@ -1,4 +1,4 @@
-**Hi everyone,well am new to github and still in th eprocess of learning.This is my first repo so i might be making a lot of mistakes and changes so just bare with me LOL**
+**Hi everyone,well am new to github and still in the process of learning.This is my first repo so i might be making a lot of mistakes and changes so just bare with me LOL**
 ---
 #### Contact
 Am mostly active on discord,so as of now the best means to contact me would be through discord only "Maverick WOlf#1010".
