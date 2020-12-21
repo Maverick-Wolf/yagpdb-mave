@@ -5,6 +5,7 @@
     -cases <user> [page] where page is optional 
     
     Recommended trigger: Regex trigger with trigger `\A(-|<@!?204255221017214977>\s*)(cases|allcase)(\s+|\z)`
+    NOTE : For any further doubts or bugs you can contact me on discord "Maverick Wolf#1010"
 */}}
 {{$args := parseArgs 1 "correct usuage is -cases @user" (carg "member" "target user") (carg "int" "page number")}}
 {{$user := ($args.Get 0).User}}
