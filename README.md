@@ -8,9 +8,7 @@ Just a basic repo (nothing too fancy) where i would be posting some custom commm
 
 ##### Other custom command repositories:
 [Joe's Repo](https://github.com/yagpdb-cc/yagpdb-cc): The official repo for custom commands of YAGPDB.xyz,has a lot of really helpful custom commands.
-
 [Crafter's Repo](https://github.com/TheHDCrafter/yagpdb-cc): Has some really amazing custom commands,should definitely take a look.
-
 [Pedros Repo](https://github.com/Pedro-Pessoa/yagpdb-cc/tree/Tickets/tickets): A fork of Joe's repo but with an amazing ticket system.
 
 ##### Other links:
