@@ -13,37 +13,37 @@
 	{{$user = $x.User}}
 {{end}}
 {{/*The variables below declare the range for the small,medium and big pp size to show some comments accordingly*/}}
-{{$small := 6}}
-{{$medium := 10}}
+{{$small := 5}}
+{{$medium := 9}}
 {{$big := 13}}{{/*also the size of the biggest pp,change it if you want*/}}
 {{$smallpp := cslice "Hope you don’t get turned down by ladies with that baby carrot you got down there."
                      "Your dick is so small,you could make love to an ant."
                      "Your dick is so small,it makes my pinky finger look like a giant."
                      "Your dick is so small,the only thing you hear in bed is, ‘is it in?"
-  		               "I bet your condoms look like the thumb of a latex glove"
-   		               "Wow, I've Never Been Able To Fit A Whole One In My Mouth Before! ;)"
-		                 "Legit feel sorry for you man"}}
+  		     "I bet your condoms look like the thumb of a latex glove"
+   		     "Wow, I've Never Been Able To Fit A Whole One In My Mouth Before! ;)"
+		     "Legit feel sorry for you man"}}
 {{$mediumpp := cslice "Aight Aight, the nerd got some meat"
-  					  "Under-construction third leg, I see."
-  					  "You surprisingly have got a nice piece of meat there"
-  					  "Average pp better than nothing"
- 					    "Don't Worry, I've Seen Smaller."
-					    "Pretty decent !"}}
+  		      "Under-construction third leg, I see."
+  		      "You surprisingly have got a nice piece of meat there"
+  		      "Average pp better than nothing"
+ 		      "Don't Worry, I've Seen Smaller."
+		      "Pretty decent !"}}
 {{$bigpp := cslice "She is gonna enjoy today"
- 				 "That’s one handsome penis."
- 				 "Just wanna you to know, you’re ENORMOUS…"
- 				 "Can’t believe all of this is on you!"
- 				 "You gonna be good at your job ;)"
- 				 "Oh oh oh!"
-				 "Aight Aight no need to flex that"}}
+ 		   "That’s one handsome penis."
+ 		   "Just wanna you to know, you’re ENORMOUS…"
+ 		   "Can’t believe all of this is on you!"
+ 		   "You gonna be good at your job ;)"
+ 		   "Oh oh oh!"
+		   "Aight Aight no need to flex that"}}
 {{$size := randInt (add $big 1)}}
 {{$comment := ""}}
 {{if and (ge $size 0) (le $size $small)}}
-	{{$comment = index (shuffle $smallpp) (randInt (len $smallpp))}} 
+	{{$comment = index (shuffle $smallpp) 0}} 
 {{else if and (ge $size (add $small 1)) (le $size $medium)}}
-	{{$comment = index (shuffle $mediumpp) (randInt (len $mediumpp))}}
+	{{$comment = index (shuffle $mediumpp) 0}}
 {{else}}
-	{{$comment = index (shuffle $bigpp) (randInt (len $bigpp))}}
+	{{$comment = index (shuffle $bigpp) 0}}
 {{end}}
 {{$pp := "8"}}
 {{range seq 0 $size}}
