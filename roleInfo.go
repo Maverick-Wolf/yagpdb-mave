@@ -12,18 +12,18 @@
 {{$all_perms := ""}}
 {{$ex := "png" }}{{if reFind "a_" .Guild.Icon}}{{$ex = "gif" }}{{end}}{{$icon := print "https://cdn.discordapp.com/icons/" .Guild.ID "/" .Guild.Icon "." $ex "?size=512" }}
 {{if $role}}
-	{{$perm := $role.Permissions}}
-	{{$perms_list := cslice "CreateInstantInvite" "KickMembers" "BanMembers" "Administrator" "ManageChannels" "ManageServer" "AddReactions" "ViewAuditLogs" "PrioritySpeaker" "Stream" "ViewChannel" "SendMessages" "SendTTSMessages" "ManageMessages" "EmbedLinks" "AttachFiles" "ReadMessageHistory" "MentionEveryone" "UseExternalEmojis" "ViewGuildInsigths" "VoiceConnect" "VoiceSpeak" "VoiceMuteMembers" "VoiceDeafenMembers" "VoiceMoveMembers" "VoiceUseVAD" "ChangeNickname" "ManageNicknames" "ManageRoles" "ManageWebhooks" "ManageEmojis"}}
-	{{range seq 0 (len $perms_list)}}
-		{{if (mod $perm 2)}}
-			{{if $all_perms}}
-				{{$all_perms = (print $all_perms ", " (index $perms_list .))}}
-			{{else}}
-				{{$all_perms = (index $perms_list .)}}
-			{{end}}
-        {{end}}
+  {{$perm := $role.Permissions}}
+  {{$perms_list := cslice "CreateInstantInvite" "KickMembers" "BanMembers" "Administrator" "ManageChannels" "ManageServer" "AddReactions" "ViewAuditLogs" "PrioritySpeaker" "Stream" "ViewChannel" "SendMessages" "SendTTSMessages" "ManageMessages" "EmbedLinks" "AttachFiles" "ReadMessageHistory" "MentionEveryone" "UseExternalEmojis" "ViewGuildInsigths" "VoiceConnect" "VoiceSpeak" "VoiceMuteMembers" "VoiceDeafenMembers" "VoiceMoveMembers" "VoiceUseVAD" "ChangeNickname" "ManageNicknames" "ManageRoles" "ManageWebhooks" "ManageEmojis"}}
+  {{range seq 0 (len $perms_list)}}
+     {{if (mod $perm 2)}}
+	{{if $all_perms}}
+	  {{$all_perms = (print $all_perms ", " (index $perms_list .))}}
+	{{else}}
+	  {{$all_perms = (index $perms_list .)}}
+	{{end}}
+     {{end}}
         {{$perm = (div $perm 2)}}
-    {{end}}
+  {{end}}
 {{$embed := (cembed "fields" (cslice (sdict "name" "Role Name" "value" (print $role.Name) "inline" true) 
 				     (sdict "name" "Role Color" "value" (print $role.Color) "inline" true)
                                      (sdict "name" "Role ID" "value" (print $role.ID) "inline" true) 
