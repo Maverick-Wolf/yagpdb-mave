@@ -4,7 +4,7 @@
     -roleinfo <role ID/role Name/role Mention> 
     
     Recommended trigger: Regex trigger with trigger `\A(-|<@!?204255221017214977>\s*)(roleinfo|ri)(\s+|\z)`
-    NOTE : For any further doubts or bugs you can contact me on discord "Maverick Wolf#1010"
+    NOTE : For any further doubts or bugs you can contact me on discord "Maverick Wolf#6565"
 */}}
 {{$role := ""}}
 {{$input := .StrippedMsg}}
