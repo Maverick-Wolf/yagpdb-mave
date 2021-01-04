@@ -5,7 +5,7 @@
     Nothing much,just fill the log channel ID and you good to go bot will do the rest  
     
     Recommended trigger: Regex trigger with trigger `.*`
-    NOTE : For any further doubts or bugs you can contact me on discord "Maverick Wolf#1010"
+    NOTE : For any further doubts or bugs you can contact me on discord "Maverick Wolf#6565"
 */}}
 {{$log_channel := 773561603659399218}}{{/*Replace with your log channel ID*/}}
 {{/*Configration values end here*/}}
