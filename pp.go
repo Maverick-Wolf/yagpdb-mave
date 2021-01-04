@@ -5,7 +5,7 @@
     -pp [user] where user is optional 
     
     Recommended trigger: Regex trigger with trigger `\A(-|<@!?204255221017214977>\s*)(pp|penis)(\s+|\z)`
-    NOTE : For any further doubts or bugs you can contact me on discord "Maverick Wolf#1010"
+    NOTE : For any further doubts or bugs you can contact me on discord "Maverick Wolf#6565"
 */}}
 {{$args := parseArgs 0 "" (carg "member" "the pp user lol")}}
 {{$user := .User}}
