@@ -33,7 +33,7 @@
                                      (sdict "name" "Position" "value" (print (sub (len .Guild.Roles) $role.Position)) "inline" true)
                                      (sdict "name" "Hoisted" "value" (print $role.Hoist) "inline" true)
   			             (sdict "name" "Managed" "value" (print $role.Managed) "inline" true)
-  			             (sdict "name" "Permissions" "value" (print $all_perms))) "color" $role.Color
+                              (sdict "name" "Permissions" "value" (or (and $all_perms (print $all_perms)) "`Role has no permission`"))) "color" (or $role.Color 15844367)
 		  "author" (sdict "name" .User.Username "icon_url" (.User.AvatarURL "512"))
 		  "thumbnail" (sdict "url" $icon)
 		  "footer" (sdict "text" .Server.Name) "timestamp" currentTime)}}
