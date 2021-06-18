@@ -1,10 +1,12 @@
-{{/* As no bot has the inbuilt feature to long images so this custom command allows you to do that.
+{{/* As no bot has the inbuilt feature to log images so this custom command allows you to do that.
 
      Usuage: 
     
-    Nothing much,just fill the log channel ID and you good to go bot will do the rest  
+    Nothing much, just fill the log channel ID and you good to go, YAGPDB will do the rest.
     
-    Recommended trigger: Regex trigger with trigger `.*`
+    Recommended trigger:
+      Trigger Type: Regex
+      Trigger: \A
     NOTE : For any further doubts or bugs you can contact me on discord "Maverick Wolf#6565"
 */}}
 {{$log_channel := 773561603659399218}}{{/*Replace with your log channel ID*/}}
