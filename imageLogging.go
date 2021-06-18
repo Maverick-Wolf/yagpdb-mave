@@ -14,7 +14,7 @@
 {{$extension := ".png" }}{{if reFind "a_" .Guild.Icon}}{{$extension = ".gif" }}{{end}}
 {{$serverAvatar := (print "https://cdn.discordapp.com/icons/" .Guild.ID "/" .Guild.Icon $extension "?size=512")}}{{/*getting the server avatar*/}}
 {{$desc := or .Message.Content ""}}
-{{$title := (or (and $desc "**Description :**") ""}}
+{{$title := (or (and $desc "**Description :**") "")}}
 {{$check := true}}{{/*a check for .mp4 and other video files which wont get shown in the embed*/}}
 {{range .Message.Attachments}}
 	{{if (reFind `(?i)\.(?:mp4|webm|mov)` .Filename)}}
