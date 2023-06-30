@@ -1,7 +1,7 @@
 Hi everyone!!
 ---
 ## Contact
-Am mostly active on discord,so as of now the best means to contact me would be through discord only `Maverick Wolf#6565`.
+Am mostly active on discord,so as of now the best means to contact me would be through discord only `maverick.wolf`.
 
 ## About the Repo 
 Just a basic repo (nothing too fancy) where i would be posting some custom commmands that i make and feel like might be helpful to others too.
